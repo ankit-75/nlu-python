@@ -418,6 +418,10 @@ class RasaNLU(object):
             logger.exception(e)
             return simplejson.dumps({"error": "{}".format(e)})
 
+    @app.route('/<string:arg>')
+    def pg_string(self, request, arg):
+        return 'String: %s!' % (arg,)
+
 
 if __name__ == '__main__':
     # Running as standalone python application
