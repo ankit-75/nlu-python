@@ -13,6 +13,8 @@ from builtins import str
 from klein import Klein
 from twisted.internet import reactor, threads
 from twisted.internet.defer import inlineCallbacks, returnValue
+from twisted.web.static import File
+
 
 from rasa_nlu import utils, config
 from rasa_nlu.config import RasaNLUModelConfig
@@ -209,6 +211,10 @@ class RasaNLU(object):
         logging.basicConfig(filename=logfile,
                             level=loglevel)
         logging.captureWarnings(True)
+
+    @app.route('/', branch=True)
+    def pg_index(self,request):
+        return File('./')
 
     @app.route("/", methods=['GET', 'OPTIONS'])
     @check_cors
