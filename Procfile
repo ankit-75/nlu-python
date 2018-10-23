@@ -1,1 +1,1 @@
-web: python -m rasa_nlu.server --path ./models/nlu/ 
+worker: python -m rasa_nlu.server --path ./models/nlu/ 
