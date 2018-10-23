@@ -1,0 +1,48 @@
+ python -m rasa_nlu.train -c nlu_config.yml --data data.json --verbose
+
+ python -m rasa_nlu.server --path models/nlu
+
+
+
+sudo docker run -p 6379:6379 -d redis:2.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+python -m rasa_nlu.train -c config_spacy.json -d data/data.json --fixed_model_name weather
+http://localhost:5000/parse?q=hello&project=current&model=nlu
+
+
+
+python -m rasa_nlu.server --path projects
+
+python -m rasa_nlu.server --path #models/#   //model Dir
+
+
+
+
+I got this error because I installed pytesseract with pip but forget to install it with apt. in this situation install it with these commands:
+
+sudo apt install tesseract-ocr
+
+sudo apt install libtesseract-dev
+
+
+
+
+
+
+
+
+
+
+python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue

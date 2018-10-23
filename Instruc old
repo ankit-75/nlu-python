@@ -1,0 +1,24 @@
+################## Prepare your NLU Training Data #############
+			`nlu.md` or `data.json`
+
+
+
+############### Define your Machine Learning Model ############
+			 `nlu_config.yml`
+
+
+	
+############### Train your Machine Learning NLU model #########
+`python -m rasa_nlu.train -c nlu_config.yml --data (nlu.md or data.json)`
+
+
+#################### Running the server #######################
+`python -m rasa_nlu.server --path models/nlu`
+
+
+
+#################### Test NLU server #######################
+`http://localhost:5000/parse?q=hello`
+
+
+python -m spacy download en_core_web_md; python -m spacy link en_core_web_md en;
