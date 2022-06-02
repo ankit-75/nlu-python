@@ -57,7 +57,7 @@ gmpy2==2.0.8
 greenlet==0.4.15
 h5py==2.8.0
 heapdict==1.0.0
-html5lib==1.0.1
+html5lib==0.99999999
 humanfriendly==4.16.1
 hyperlink==18.0.0
 idna==2.7
